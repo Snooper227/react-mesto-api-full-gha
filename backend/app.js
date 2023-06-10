@@ -9,7 +9,7 @@ const { requestLogger, errorLogger } = require('./middelwares/logger');
 
 const app = express();
 const { PORT = 3000 } = process.env;
-const BASE_PATH = 'mongodb://localhost:27017/mestodb';
+const BASE_PATH = 'mongodb://127.0.0.1:27017/mestodb';
 
 mongoose.connect(BASE_PATH, {
   useNewUrlParser: true,
