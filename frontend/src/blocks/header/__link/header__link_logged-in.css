@@ -1,0 +1,12 @@
+.header__link_logged-in {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #a9a9a9;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}

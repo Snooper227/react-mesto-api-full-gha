@@ -1,0 +1,12 @@
+.header__user {
+  display: flex;
+  margin: 6px 0 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+.header__user span {
+  margin-right: 24px;
+  color: #fff;
+}

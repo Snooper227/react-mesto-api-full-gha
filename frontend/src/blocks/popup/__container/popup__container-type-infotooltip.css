@@ -1,0 +1,8 @@
+.popup__container-type-infoTooltip{
+    width: 430px;
+    height: 330px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}

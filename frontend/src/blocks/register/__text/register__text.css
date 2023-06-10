@@ -1,0 +1,15 @@
+.register__text{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 15px;
+}
+@media (max-width: 320px) {
+  .register__text{
+    margin: 20px 0 0 0;
+  }
+}

@@ -1,0 +1,7 @@
+.popup__section{
+    margin-bottom: 30px;
+    position: relative;
+}
+.popup__section:last-of-type{
+    margin-bottom: 0;
+}

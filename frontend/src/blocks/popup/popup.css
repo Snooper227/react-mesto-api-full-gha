@@ -1,0 +1,19 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .45s linear, opacity .45s linear;
+}
+
+.popup_type_image{
+    background-color: rgba(0, 0, 0, 0.9);
+}

@@ -1,0 +1,29 @@
+.popup__close {
+    background: url('../../../images/close_icon.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: -40px;
+    top: -40px;
+    border: 0;
+    padding: 0;
+}
+
+.popup__close:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+@media screen and (max-width: calc(768px + 20px)) {
+    .popup__close {
+        right: 0;
+    }
+}
+@media screen and (max-width: calc(320px + 20px)) {
+
+    .popup__close {
+        background: url('../../../images/close_icon_mini.svg');
+        width: 20px;
+        height: 20px;
+    }
+}

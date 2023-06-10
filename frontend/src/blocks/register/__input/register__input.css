@@ -1,0 +1,22 @@
+.register__input{
+  padding: 0;
+  padding-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid rgba(204, 204, 204, 1);
+  background-color: transparent;
+  margin-bottom: 30px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+.register__input:last-of-type {
+  margin-bottom: 0;
+}
+
+.register__input::placeholder {
+  font-weight: 400;
+  color: #CCCCCC;
+}

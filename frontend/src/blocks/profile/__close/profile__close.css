@@ -1,0 +1,12 @@
+.profile__close {
+    width: 22px;
+    height: 22px;
+    margin: auto;
+}
+
+@media screen and (max-width: calc(768px + 20px)) {
+    .profile__close {
+        width: 16px;
+        height: 16px;
+    }
+}
