@@ -14,7 +14,10 @@ register(email, password) {
     headers: {
       "Content-type": "application/json"
     },
-    body: JSON.stringify({email, password})
+    body: JSON.stringify({
+      email: email,
+      password:password
+    })
   })
   .then(this._checkRes);
 }
@@ -22,9 +25,12 @@ authorization(email, password) {
   return fetch(`${this._baseUrl}/signin`, {
     method: 'POST',
     headers: {
-      'Content-type': 'application/json'
+      "Content-type": "application/json"
     },
-    body: JSON.stringify({email, password})
+    body: JSON.stringify({
+      email: email,
+      password: password
+    })
   })
   .then(this._checkRes)
   .then((data) => {
@@ -42,7 +48,7 @@ chekTokenValid(token) {
     method: 'GET',
     headers: {
       "Content-type": "application/json",
-    "Authorization" : `Bearer ${token}`
+      "Authorization" : `Bearer ${token}`
     },
   })
   .then(this._checkRes);
