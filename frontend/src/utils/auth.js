@@ -16,7 +16,7 @@ register(email, password) {
     },
     body: JSON.stringify({
       email: email,
-      password:password
+      password: password
     })
   })
   .then(this._checkRes);
