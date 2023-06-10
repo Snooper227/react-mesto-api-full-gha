@@ -54,6 +54,6 @@ chekTokenValid(token) {
   .then(this._checkRes);
 }
 }
-const auth = new Auth('https://api.snooper227.nomoredomains.rocks/');
+const auth = new Auth('https://api.snooper227.nomoredomains.rocks');
 
 export default auth;

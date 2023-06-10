@@ -125,5 +125,5 @@ export default class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'https://api.snooper227.nomoredomains.rocks/'
+  baseUrl: 'https://api.snooper227.nomoredomains.rocks'
 });
