@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
+require('dotenv').config();
 const cors = require('cors');
 const { errors } = require('celebrate');
 const { handleErrors } = require('./middelwares/handleError');
