@@ -7,7 +7,7 @@
 Адрес репозитория: https://github.com/Snooper227/react-mesto-api-full-gha
 
 ## Ссылки на проект
-Публичный IP-адрес: 130.193.51.77
+IP: 130.193.51.77
 
 Frontend https://snooper227.nomoredomains.rocks/
 
