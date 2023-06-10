@@ -48,6 +48,6 @@ chekTokenValid(token) {
   .then(this._checkRes);
 }
 }
-const auth = new Auth('http://localhost:3000');
+const auth = new Auth('https://localhost:3000');
 
 export default auth;
