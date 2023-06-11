@@ -5,6 +5,8 @@ function Card({ card, handlePopup }) {
   const currentUser = React.useContext(CurrentUserContext);
 
   const isOwn = card.owner._id === currentUser._id;
+  console.log(card.owner._id)
+  console.log(currentUser._id)
   const isLiked = card.likes.some((user) => user._id === currentUser._id);
   const cardLikeButtonClassName = `element__like ${
     isLiked && "element__like_active"

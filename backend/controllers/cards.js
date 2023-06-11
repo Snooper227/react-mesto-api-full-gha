@@ -67,7 +67,7 @@ function dislikedCard(req, res, next) {
 }
 function getCards(_, res, next) {
   Card.find({}).sort({ createdAt: -1 })
-    .populate(['owner', 'likes'])
+    .populate(['likes', 'owner'])
     .then((cards) => res.send(cards))
     .catch((err) => {
       next(err);
