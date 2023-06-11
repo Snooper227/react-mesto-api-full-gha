@@ -26,7 +26,6 @@ function likeCard(req, res, next) {
       new: true,
     },
   )
-    .populate(['likes', 'owner'])
     .then((card) => {
       if (card) return res.status(200).send(card);
 
@@ -51,7 +50,6 @@ function dislikedCard(req, res, next) {
       new: true,
     },
   )
-    .populate(['likes', 'owner'])
     .then((card) => {
       if (card) return res.status(200).send(card);
 
@@ -67,7 +65,6 @@ function dislikedCard(req, res, next) {
 }
 function getCards(_, res, next) {
   Card.find({}).sort({ createdAt: -1 })
-    .populate(['likes', 'owner'])
     .then((cards) => res.send(cards))
     .catch((err) => {
       next(err);
