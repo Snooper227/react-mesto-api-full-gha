@@ -76,7 +76,6 @@ function getCards(_, res, next) {
 
 function deleteCard(req, res, next) {
   Card.findById(req.params.cardId)
-    .populate(['owner', 'likes'])
     .then((card) => {
       if (card == null) {
         throw new NotFoundError('Карточка не найдена');
