@@ -140,7 +140,6 @@ function App() {
     api
       .addCard(data.name, data.link)
       .then((newCard) => {
-        console.log(newCard);
         setCards([newCard, ...cards]);
         closeAllPopups();
       })

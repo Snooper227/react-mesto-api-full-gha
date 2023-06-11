@@ -4,7 +4,7 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 function Card({ card, handlePopup }) {
   const currentUser = React.useContext(CurrentUserContext);
 
-  const isOwn = card.owner._id === currentUser._id;
+  const isOwn = card.owner === currentUser._id;
   console.log(card.owner)
   const isLiked = card.likes.some((user) => user._id === currentUser._id);
   const cardLikeButtonClassName = `element__like ${
