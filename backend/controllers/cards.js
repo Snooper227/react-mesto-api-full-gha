@@ -58,9 +58,7 @@ function dislikedCard(req, res, next) {
       throw new NotFoundError('Объект не найден');
     })
     .catch((err) => {
-      if (err.name === 'ValidationError') {
-        next(new ValidationError('Переданы некорректные данные при снятии лайка'));
-      } else if (err.name === 'CastError') {
+      if (err.name === 'CastError') {
         next(new ValidationError('Передан невалидный id'));
       } else {
         next(err);
@@ -68,7 +66,7 @@ function dislikedCard(req, res, next) {
     });
 }
 function getCards(_, res, next) {
-  Card.find({})
+  Card.find({}).sort({ createdAt: -1 })
     .populate(['owner', 'likes'])
     .then((cards) => res.send(cards))
     .catch((err) => {

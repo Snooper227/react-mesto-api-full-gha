@@ -53,7 +53,11 @@ function loginUser(req, res, next) {
 
   return User.findUserByCredentials(email, password)
     .then((user) => {
-      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-key', { expiresIn: '7d' });
+      const token = jwt.sign(
+        { _id: user._id },
+        NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-key',
+        { expiresIn: '7d' },
+      );
       res.status(200).send({ token });
     })
     .catch((err) => {
@@ -117,9 +121,7 @@ function updateUser(req, res, next) {
     },
   )
     .orFail(() => {
-      const error = new Error('Пользователь с таким id не найден');
-      error.statusCode = 404;
-      throw error;
+      next(new NotFoundError('Пользователь с таким id не найден'));
     })
     .then((user) => {
       res.send(user);
@@ -149,9 +151,7 @@ function updateAvatar(req, res, next) {
     },
   )
     .orFail(() => {
-      const error = new Error('Пользователь с таким id не найден');
-      error.statusCode = 404;
-      throw error;
+      next(new NotFoundError('Пользователь с таким id не найден'));
     })
     .then((user) => {
       res.send(user);
