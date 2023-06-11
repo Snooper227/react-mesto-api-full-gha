@@ -80,7 +80,7 @@ function deleteCard(req, res, next) {
     .then((card) => {
       if (card == null) {
         throw new NotFoundError('Карточка не найдена');
-      } else if (String(card.owner) !== req.user._id) {
+      } else if (req.user._id !== String(card.owner)) {
         throw new ForbiddenError('Доступ ограничен');
       } return Card.findByIdAndRemove(req.params.cardId)
         .then(() => {
