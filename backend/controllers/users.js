@@ -120,9 +120,7 @@ function updateUser(req, res, next) {
       upsert: false,
     },
   )
-    .orFail(() => {
-      next(new NotFoundError('Пользователь с таким id не найден'));
-    })
+    .orFail(new NotFoundError('Пользователь с таким id не найден'))
     .then((user) => {
       res.send(user);
     })
@@ -150,9 +148,7 @@ function updateAvatar(req, res, next) {
       runValidators: true,
     },
   )
-    .orFail(() => {
-      next(new NotFoundError('Пользователь с таким id не найден'));
-    })
+    .orFail(new NotFoundError('Пользователь с таким id не найден'))
     .then((user) => {
       res.send(user);
     })
